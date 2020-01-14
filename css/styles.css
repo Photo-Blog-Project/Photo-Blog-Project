@@ -1,0 +1,46 @@
+header {
+    border: 1px solid black;
+}
+
+.menu {
+    border: 1px solid black;
+}
+
+.section1 {
+    border: 1px solid black;
+    height: 180px;
+    display: flex;
+}
+
+.section2 {
+    border: 1px solid black;
+    height: 180px;
+}
+
+.section3 {
+    border: 1px solid black;
+    height: 180px;
+}
+
+.food {
+    border: 1px solid black;
+    height: 100px;
+    width: 33%;
+}
+
+.cathedral {
+    border: 1px solid black;
+    height: 100px;
+    width: 33%;
+}
+
+.beach {
+    border: 1px solid black;
+    height: 100px;
+    width: 33%;
+}
+
+footer {
+    border: 1px solid black;
+    height: 100px;
+}
