@@ -1,6 +1,7 @@
-/* Modifica la posición del menu y la fuente y ell tamaño */
+/* Modifica la posición del menu y la fuente y el tamaño */
 .mallorcaMenu {
     font-family: 'Poiret One', cursive;
+    color: #39424E;
 }
 
 .navbar-collapse {
@@ -10,21 +11,44 @@
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
     margin-right: 50px;
 }
- /* Para fijar el nav arriva y que tenga fondo blanco */
+ /* Para fijar el nav arriba y que tenga fondo blanco */
 .fixed-top {
     background-color: white;
+    border-bottom: 3px solid #39424E;
+    opacity: 0.95;
 }
 
 /* corrogiendo la altura del carrusel */
-.carousel-item{
+/* .carousel-item{
     height: 900px;
-  } 
-  .carousel-item img{
+    background-size: cover;
+} 
+.carousel-item img{
     height: 900px;
-  }
+    background-size: cover;
+} */
 
+/* Bajar el carrousel a continuación del menu de navegación */
+.carousel-inner {
+    margin-top: 80px;
+    background-size: cover
+}  
 
-.section1 {
+/* titulo en el centro del carrusel */
+.slogan {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.slogan h2 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 6vw;
 }
 
 .section2 {
@@ -35,6 +59,8 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin: 0 30px;
+    text-decoration: none;
 }
 
 .card {
@@ -45,15 +71,56 @@
     -webkit-box-shadow: 10px 10px 10px 0px rgba(102,102,102,1);
     -moz-box-shadow: 10px 10px 10px 0px rgba(102,102,102,1);
     box-shadow: 10px 10px 10px 0px rgba(102,102,102,1);
-    
+}
+
+.card_capa {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    display: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+
+.text_capa {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    display: none;
+    color: #39424E;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 2vw;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
 }
 
 .card:hover {
-    
-    transition:all .5s ease-in-out;
-    transform:scale(0.9);
-
+    transition:all .35s ease-in-out;
+    transform:scale(0.95);
 }
+
+.card:hover .card_capa {
+    display: inline-flex;
+}
+
+.card:hover .text_capa {
+    display: inline-flex;
+}
+
 
 .cardPicture1 {
     background-image: url("/img/valldemossa.jpg");
@@ -68,9 +135,9 @@
 .cardPicture2 {
     background-image: url("/img/cathedralCard.jpg");
     height: 300px;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /*cover the entire container */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
     border-radius: 6px 6px 0 0;
 
 }
@@ -94,39 +161,70 @@
     font-size: 12px;
 }
 
-.cardText H2 {
+.cardText h2 {
     font-size: 30px;
     font-family: 'Gayathri', sans-serif;
     font-family: 'Roboto', sans-serif;
+}
+
+.sectionText h3{
+    margin: 100px 100px 0 100px;
+    font-family: 'Poiret One', cursive;
+    font-weight: 600;
+
+}
+
+.containerEvents {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.eventCard {
+    display: flex;
+    width: 500px;
+    height: 100px;
+    margin-top: 60px;
+    border: none;
+    -webkit-box-shadow: 10px 10px 5px -1px rgba(153,153,153,1);
+    -moz-box-shadow: 10px 10px 5px -1px rgba(153,153,153,1);
+    box-shadow: 10px 10px 5px -1px rgba(153,153,153,1);
+}
+
+.eventCard:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(0.95);
+}
+
+.eventDate p {
+    font-family: 'Amatic SC', cursive;
+    width: 100px;
+    border-right: 0.5px solid #39424E;
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #39424E
+}
+
+.eventDescription {
+    font-family: 'Amatic SC', cursive;
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section3 {
     height: 500px;
     background-image: url("/img/formentor-mallorca.jpg");
     background-position: center;
-}
-
-.food {
-    border: 1px solid black;
-    height: 100px;
-    width: 33%;
-}
-
-.cathedral {
-    border: 1px solid black;
-    height: 100px;
-    width: 33%;
-}
-
-.beach {
-    border: 1px solid black;
-    height: 100px;
-    width: 33%;
-}
-
-footer {
-    border: 1px solid black;
-    height: 100px;
 }
 
 
@@ -144,4 +242,357 @@ footer {
     text-align: center;
     color: rgb(240, 223, 125);
 }
+
+.unesco {
+    font-size: 20px;
+    font-weight: 900;
+    font-style: italic;
+}
+/* CSS activities .html */
+
+.container-flex {
+    margin-top: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+
+.row {
+    height: 120vh;
+}
+
+.col-sm-3 {
+    border: 3px solid white;
+}
+
+.col-sm-6 {
+    border: 3px solid white;
+}
+.col-sm-4 {
+    border: 3px solid white;
+}
+.col-sm-8 {
+    border: 3px solid white;
+}
+
+.cave {
+    background-image: url("../img/drach-640x426.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.cave:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(0.95);
+}
+
+.fireworks {
+    background-image: url("../img/fireworks.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.fireworks:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(0.95);
+}
+
+.restaurant {
+    background-image: url("../img/restaurant.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.restaurant:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(0.95);
+}
+
+.localMarket {
+    background-image: url("../img/fish-market.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.localMarket:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(0.95);
+}
+
+.localFood {
+    background-image: url("../img/local-food.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.localFood:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(0.97);
+}
+
+.aquarium {
+    background-image: url("../img/Aquarium.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.aquarium:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(0.95);
+}
+
+.tram {
+    background-image: url("../img/tram-of-soller.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.tram:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(0.95);
+}
+
+.sup {
+    background-image: url("../img/sup.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.sup:hover {
+    transition: all .5s ease-in-out;
+    transform: scale(0.95);
+}
+
+.cardCapa {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0.7;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 0 -15px;
+    display: none;
+    color: #39424E;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: large;
+}
+
+.textCapa {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    color: #39424E;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 2.5vw;
+    margin: 0px 0 0 -15px;
+    z-index: 1;
+    text-align: center;
+}
+
+.fireworks:hover .cardCapa, .sup:hover .cardCapa, .cave:hover .cardCapa, .aquarium:hover .cardCapa, 
+.localMarket:hover .cardCapa, .restaurant:hover .cardCapa, .tram:hover .cardCapa  {
+    display: inline-flex;
+}
+
+.fireworks:hover .textCapa, .sup:hover .textCapa, .cave:hover .textCapa, .aquarium:hover .textCapa, 
+.localMarket:hover .textCapa, .restaurant:hover .textCapa, .tram:hover .textCapa {
+    display: inline-flex;
+}
+
+/* Footer */
+.topFooter {
+    background-color: #39424E;
+    height: 370px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.downFooter {
+    background-color: rgb(38, 42, 48);
+    height: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+
+}
+
+.downFooter p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    display: flex;
+    align-content: center;
+}
+
+.searchForm {
+    display: flex;
+    justify-content: right;
+    margin-left
+}
+
+.social {
+    height: 200px;
+    width: 25%;
+    padding-top: 40px;
+    margin-right: 70px;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    color: white;
+    line-height: 30px;
+}
+
+.menuFooter {
+    list-style-type: none;
+}
+
+.menuFooterTitle {
+    border-bottom: 0.5px solid white;
+}
+
+.menuFooterTitle h3{
+    font-size: 1.2em;
+}
+
+.menuPolicy {
+    list-style-type: circle;
+    margin-top: 33px;
+}
+
+/* Contact Us */
+.contact_form {
+    margin-top: 150px;
+}
+
+.contact_form h2{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    margin-left: 25px;
+    font-weight: bolder;
+}
+
+.contact{
+    padding: 4%;
+    height: 400px;
+}
+
+.contact-info{
+    margin-top:10%;
+}
+
+.contact-info img{
+    margin-bottom: 15%;
+
+}
+.contact-info h2{
+    margin-bottom: 10%;
+
+}
+.col-md-9{
+    background: #fff;
+    padding: 3%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    height: 600px;
+}
+.contact-form label{
+    font-weight:600;
+}
+.contact-form button{
+    background: #25274d;
+    color: #fff;
+    font-weight: 600;
+    width: 25%;
+}
+.contact-form button:focus{
+    box-shadow:none;
+}
+
+/* Fotos programadores */
+.profile {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: -200px;
+    margin-bottom: 80px;
+    height: 200px;
+}
+
+.student {
+    display: flex;
+    margin-left: 30px;
+}
+
+.avatar1 {
+    height: 180px;
+    width: 180px;
+    border: 1px solid black;
+    margin-bottom: 100px;
+    background-image: url("../img/Foto-Perfil-Javi-Sanchez-Ciria.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    margin-top: 10px;
+
+}
+
+.avatar2 {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background-image: url("../img/avatar.png");
+    background-size: cover;
+}
+
+.avatar_text {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.avatar_text p {
+    margin-bottom: 0;
+    margin-left: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.social_logo {
+    margin-left: 42px;
+    font-size: 40px;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+  
+a:link:active, a:visited:active {
+    color: (internal value);
+}
+
+.icon_social:hover {
+    color:#262A30;
+}
+
+.icon_social2:hover {
+    color:rgb(252, 89, 116);
+    font-size: 20px;
+}
+
 
